@@ -1,6 +1,91 @@
+body{
+
+  font-family: "Quicksand", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 28px;
+  font-style: normal;
+}
+
 #presentacion {
-    height: 90vh;
+    position: relative;
+    height: 100vh;
     display: flex;
     justify-content: start;
     align-items: center;
+    overflow: hidden; /* Asegura que la imagen de fondo no se desborde */
 }
+
+/* Contenedor para la imagen de fondo */
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/wallpaper-computer.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    filter: blur(2px);
+    z-index: 1; /* Coloca la imagen de fondo detrás del contenido */
+}
+#presentacion::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(45, 40, 40, 0.677); 
+    z-index: 2; 
+}
+
+
+/* Contenedor para el contenido */
+.info-presentacion {
+    position: relative;
+    z-index: 2; /* Asegura que el contenido esté por encima de la imagen de fondo */
+}
+
+.proyecto{
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+#proyecto-1{
+    background-image: url('assets/clon-google.png');
+    
+}
+
+#proyecto-2{
+    background-image: url('assets/cotizador-web.png');
+}
+
+#proyecto-3{
+    background-image: url('assets/solar-seed-web.png');
+}
+
+/* Crea una superposición de color negro con opacidad */
+#proyecto-1::before,
+#proyecto-2::before,
+#proyecto-3::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.23); 
+    z-index: 1; 
+}
+
+
+.proyecto .d-flex {
+    position: relative; 
+    z-index: 2; 
+}
+.text-shadow-11{ text-shadow: 0 .125rem .25rem rgb(0, 0, 0, 0.25);}
+.text-shadow-2{ text-shadow: 0 .25rem .5rem rgb(0, 0, 0, 0.25);}
+.text-shadow-3{ text-shadow: 0 .5rem 1.5rem rgb(0, 0, 0, 0.25);}
+
+.text-shadow-1{ text-shadow: -5px 5px 6px rgba(0, 0, 0, 1);}
