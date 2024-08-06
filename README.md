@@ -6,7 +6,7 @@ Fue desarrollado con HTML, CSS Y JS con el uso de el framework de UI, Bootstrap 
 
 La página es responsiva (adaptable a diferentes tamaños de pantalla) e incluye la presentación de la autora del proyecto.
 
-Proyecto Desplegado ()
+Proyecto Desplegado (https://sofia-camacho.netlify.app/)
 
  ## Secciones de mi sitio
 ![Presentacion](assets/README/presentacion.png)
